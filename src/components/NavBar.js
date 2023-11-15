@@ -1,9 +1,14 @@
-import React from "react";
+// ProjectItem.js
+import React from 'react';
 
-function NavBar() {
-  const links = ["home", "about", "projects"];
+const ProjectItem = ({ technologies }) => {
+  return (
+    <div>
+      {technologies.map((technology, index) => (
+        <span key={index}>{technology}</span>
+      ))}
+    </div>
+  );
+};
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
-}
-
-export default NavBar;
+export default ProjectItem;
